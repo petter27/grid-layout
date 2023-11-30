@@ -1,0 +1,38 @@
+.container{
+  display:grid;
+  background-color: lightsalmon;
+  grid-template-columns: repeat(auto-fill,minmax(240px, 1fr));
+  grid-gap: 10px;
+  grid-auto-rows: 100px;
+}
+
+.container .item{
+  background-color: lightblue;
+  width: 100%;
+  border: 1px solid blue;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.container .item:hover{
+  background-color: lightgreen;
+  transition: 0.5s;
+}
+
+.container .item:first-child{
+  grid-column: 2/4;
+}
+
+.container .item:nth-child(6){
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.container .item:last-child{
+  grid-column-end: 2 span;
+}
